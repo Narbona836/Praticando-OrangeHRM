@@ -1,27 +1,7 @@
 import userData from '../fixtures/userData.json'
-
+import seletores from '../fixtures/userSelectorDependents.json'
 
 describe('Dependents', () => {
-
-const seletores = {
-    //seletores de login
-    usernameInput: 'input[name="username"]',
-    passwordInput: 'input[name="password"]',
-    loginButton: 'button[type="submit"]',
-    dashboardUrl: '/web/index.php/dashboard/index',
-    //seletores do My Info(Dependents)
-    botonMyInfo: "[href='/web/index.php/pim/viewMyDetails']",
-    urlMyInfo: "/pim/viewPersonalDetails/empNumber/7",
-    buttonDependents: "[data-v-84c8a174='']",
-    //seletores do formulario de Dependents
-    buttonAssignedDependents: "[data-v-10d463b7='']",
-    campoName: "[data-v-1f99f73c='']",
-    campoRelationship:"[data-v-67d2aedf='']",
-    campoDateofBirth: "[placeholder='yyyy-dd-mm']",
-    buttonSaveDependents: "[type='submit']",
-    menssagenmSucesso: ".oxd-text.oxd-text--toast-message"
-}
-
     beforeEach(() => {
         cy.visit('/auth/login')
         cy.get(seletores.usernameInput).type(userData.validUser.username)

@@ -1,28 +1,8 @@
 import userData from '../fixtures/userData.json'
-
+import seletores from '../fixtures/userSelectorEmergencyContacts.json'
 
 describe('Emergency contacts', () => {
 
-const seletores = {
-    //seletores de login
-    usernameInput: 'input[name="username"]',
-    passwordInput: 'input[name="password"]',
-    loginButton: 'button[type="submit"]',
-    dashboardUrl: '/web/index.php/dashboard/index',
-    //seletores do My Info(Emergency Contacts)
-    botonMyInfo: "[href='/web/index.php/pim/viewMyDetails']",
-    urlMyInfo: "/pim/viewPersonalDetails/empNumber/7",
-    buttonEmergencyContacts: "[href='/web/index.php/pim/viewEmergencyContacts/empNumber/7']",
-    buttonAddEmergencyContact: "[data-v-10d463b7='']",
-    //seletores do formulario de Emergency Contacts
-    campoName: "[data-v-1f99f73c='']",
-    campoRelationship: "[data-v-1f99f73c='']",
-    campoHomeTelephone: "[data-v-1f99f73c='']",
-    campoMobile: "[data-v-1f99f73c='']",
-    campoWorkTelephone: "[data-v-1f99f73c='']",
-    buttonSaveEmergencyContact: "[type='submit']",
-    menssagenmSucesso: ".oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text"
-}
 
     beforeEach(() => {
         cy.visit('/auth/login')

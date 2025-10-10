@@ -1,32 +1,8 @@
-import { url } from 'inspector'
+import seletores from '../fixtures/userSelectorImmigration.json'
 import userData from '../fixtures/userData.json'
 
 
 describe('Immigration', () => {
-
-const seletores = {
-    usernameInput: 'input[name="username"]',
-    passwordInput: 'input[name="password"]',
-    loginButton: 'button[type="submit"]',
-    dashboardUrl: '/web/index.php/dashboard/index',
-    //seletores do My Info(Immigration)
-    botonMyInfo: "[href='/web/index.php/pim/viewMyDetails']",
-    urlMyInfo: "/pim/viewPersonalDetails/empNumber/7",
-    ButtonImmigration: "[href='/web/index.php/pim/viewImmigration/empNumber/7']",
-    urlImmigration: "/pim/viewImmigration/empNumber/7",
-    buttonAddImmigration: "[data-v-3dab643a='']",
-    selectDocument: "[data-v-7ef819fd='']",
-    campoNunber: "[data-v-1f99f73c='']",
-    campoIssuedDate: "[placeholder='yyyy-dd-mm']",
-    campoExpiryDate: "[placeholder='yyyy-dd-mm']",
-    campoEligibleStatus: "[data-v-1f99f73c='']",
-    campoIssuedBy: "[data-v-67d2aedf='']",
-    campoEligibleReviewDate: "[placeholder='yyyy-dd-mm']",
-    campoComments: "[placeholder='Type Comments here']",
-    buttonSaveImmigration: "[data-v-10d463b7='']",
-    
-}
-
     beforeEach(() => {
         cy.visit('/auth/login')
         cy.get(seletores.usernameInput).type(userData.validUser.username)

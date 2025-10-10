@@ -1,37 +1,8 @@
 import userData from '../fixtures/userData.json'
+import seletores from '../fixtures/userSelectorDashboard.json'
 
 
 describe('Personal Details', () => {
-
-const seletores = {
-    //seletores de login
-    usernameInput: 'input[name="username"]',
-    passwordInput: 'input[name="password"]',
-    loginButton: 'button[type="submit"]',
-    dashboardUrl: '/web/index.php/dashboard/index',
-    //seletores do My Info
-    botonMyInfo: "[href='/web/index.php/pim/viewMyDetails']",
-    urlMyInfo: '/pim/viewPersonalDetails/empNumber/7',
-    campofirstName: "[name='firstName']",
-    campoMiddleName: "[name='middleName']",
-    campoLastName: "[name='lastName']",
-    //seletores de identificação
-    campoId: "[data-v-1f99f73c='']",
-    campoOTherId: "[data-v-1f99f73c='']",
-    campoDriversLicense: "[data-v-1f99f73c='']",
-    campoLicenseExpiry: "[placeholder='yyyy-dd-mm']",
-    campoNationality: "[clear='false']",
-    campoMaritalStatus: "[clear='false']",
-    campoDateOfBirth: "[placeholder='yyyy-dd-mm']",
-    campoGender:".--label-right",
-    bottonSaveIdentification: "[type='submit']",
-    mensagenmSucesso: ".oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text",
-    //seletore Custom Fields
-    campoBloodType: "[tabindex='0']",
-    campoTestField: "[options='']"
-
-}
-
     beforeEach(() => {
         cy.visit('/auth/login')
         cy.get(seletores.usernameInput).type(userData.validUser.username)

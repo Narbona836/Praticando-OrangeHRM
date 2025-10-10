@@ -1,34 +1,7 @@
 import userData from '../fixtures/userData.json'
-
+import seletores from '../fixtures/userSelector.ContactDetails.json'
 
 describe('Contact Details', () => {
-
-const seletores = {
-    //seletores de login
-    usernameInput: 'input[name="username"]',
-    passwordInput: 'input[name="password"]',
-    loginButton: 'button[type="submit"]',
-    dashboardUrl: '/web/index.php/dashboard/index',
-    //seletores do My Info(Contact Details)
-    botonMyInfo: "[href='/web/index.php/pim/viewMyDetails']",
-    butonContactDetails: "[data-v-84c8a174='']",
-    //seletores Address
-    campoStreet1: "[data-v-1f99f73c='']",
-    campoStreet2: "[data-v-1f99f73c='']",
-    campoCity: "[data-v-1f99f73c='']",
-    campoState: "[data-v-1f99f73c='']",
-    campoPostalCode: "[data-v-1f99f73c='']",
-    campoCountry: "[data-v-67d2aedf='']",
-    //seletores Telephone
-    campoHome: "[modelmodifiers='[object Object]']",
-    campoMobile: "[modelmodifiers='[object Object]']",
-    campoWork: "[modelmodifiers='[object Object]']",
-    //seletores Email
-    campoWorkEmail: "[data-v-1f99f73c='']",
-    campoOtherEmail: "[data-v-1f99f73c='']",
-    bottonSaveContactDetails: "[data-v-10d463b7='']",
-    menssagenmSucesso: ".oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text"
-}
 beforeEach(() => {
             cy.visit('/auth/login')
         cy.get(seletores.usernameInput).type(userData.validUser.username)

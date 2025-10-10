@@ -1,0 +1,21 @@
+{
+    "usernameInput": "input[name='username']",
+    "passwordInput": "input[name='password']",
+    "loginButton": "button[type='submit']",
+    "dashboardUrl": "/web/index.php/dashboard/index",
+    "botonMyInfo": "[href='/web/index.php/pim/viewMyDetails']",
+    "butonContactDetails": "[data-v-84c8a174='']",
+    "campoStreet1": "[data-v-1f99f73c='']",
+    "campoStreet2": "[data-v-1f99f73c='']",
+    "campoCity": "[data-v-1f99f73c='']",
+    "campoState": "[data-v-1f99f73c='']",
+    "campoPostalCode": "[data-v-1f99f73c='']",
+    "campoCountry": "[data-v-67d2aedf='']",
+    "campoHome": "[modelmodifiers='[object Object]']",
+    "campoMobile": "[modelmodifiers='[object Object]']",
+    "campoWork": "[modelmodifiers='[object Object]']",
+    "campoWorkEmail": "[data-v-1f99f73c='']",
+    "campoOtherEmail": "[data-v-1f99f73c='']",
+    "bottonSaveContactDetails": "[data-v-10d463b7='']",
+    "menssagenmSucesso": ".oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text"
+}
