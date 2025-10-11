@@ -1,0 +1,32 @@
+{
+    "usernameInput": "input[name='username']",
+    "passwordInput": "input[name='password']",
+    "loginButton": "button[type='submit']",
+    "dashboardUrl": "/web/index.php/dashboard/index",
+    "botonMyInfo": "[href='/web/index.php/pim/viewMyDetails']",
+    "buttonQualifications": "[href='/web/index.php/pim/viewQualifications/empNumber/7']",
+    "urlQualifications": "/pim/viewQualifications/empNumber/7",
+    "campoCompany": "[data-v-1f99f73c='']",
+    "buttonAddExperience": "[data-v-3dab643a='']",
+    "campoJobTitle": "[data-v-1f99f73c='']",
+    "campoDataFron": "[placeholder='yyyy-dd-mm']",
+    "campoDataTo": "[placeholder='yyyy-dd-mm']",
+    "campoComment": "[data-v-bd337f32='']",
+    "buttonSaveQualificatons": "[data-v-10d463b7='']",
+    "menssagemSucesso": ".oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text",
+    "buttonAddWorkExperience": "[data-v-3dab643a='']",
+    "buttonExcluirWorkExperience": "[data-v-f5c763eb='']",
+    "buttonDeleteWorkExperience": "[data-v-8f9701a2='']",
+    "menssagemDeleteSucesso": ".oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text",
+    "buttonAddEducation": "[data-v-3dab643a='']",
+    "campoLevel": "[data-v-67d2aedf='']",
+    "campoInstitute": "[data-v-1f99f73c='']",
+    "campoSpecialization": "[data-v-1f99f73c='']",
+    "campoYear": "[data-v-1f99f73c='']",
+    "campoScore": "[data-v-1f99f73c='']",
+    "campoStartDate": "[placeholder='yyyy-dd-mm']",
+    "campoEndDate": "[placeholder='yyyy-dd-mm']",
+    "buttonSaveEducation": "[data-v-10d463b7='']"
+   
+
+}
