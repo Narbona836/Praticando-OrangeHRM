@@ -1,0 +1,23 @@
+{   
+    
+        "usernameInput": "input[name='username']",
+        "passwordInput": "input[name='password']",
+        "loginButton": "button[type='submit']",
+        "dashboardUrl":"/web/index.php/dashboard/index",
+        "menssagenAlert": ".oxd-alert-content-text",
+        "menssagenErro": "Invalid credentials",
+        "buttonPIM": "[data-v-6475d26d='']",
+        "buttonAddEmployee": "[data-v-5327b38a='']",
+        "campoFirstName": "[name='firstName']",
+        "campoMiddleName": "[name='middleName']",
+        "campoLastName": "[name='lastName']",
+        "campoEmployeeId": "[data-v-1f99f73c='']",
+        "buttonCreateLoginDetails": "[data-v-8e4757dc='']",
+        "campoUsername": "[data-v-1f99f73c='']",
+        "campoStatusEnabled": "[data-v-7ef819fd='']",
+        "campoPassword": "[data-v-1f99f73c='']",
+        "campoComfrmPassoword": "[data-v-1f99f73c='']",
+        "buttonSaveAddEmployee": "[data-v-10d463b7='']",
+        "menssagenmSucesso": ".oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text"
+
+}
