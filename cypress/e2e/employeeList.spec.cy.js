@@ -22,4 +22,14 @@ describe('Employee List', () => {
         cy.get(seletores.buttonSearch).eq(1).click();
         cy.get(seletores.checkUser,this.employeeId).eq(1).should('be.visible');
     });
+
+    it ('Deve encontrar o usuario criado na lista pelo Nome',function () {
+        cy.get(seletores.buttonPIM).eq(4).click();
+        cy.get(seletores.buttonEmployeeList).eq(3).click();
+        cy.url().should('include', seletores.employeeListUrl);
+        cy.get(seletores.campoEmployeeName).eq(0).type(this.lastUser.username);
+        cy.get(seletores.buttonSearch).eq(1).click();
+        cy.get(seletores.checkUser,this.username).eq(1).should('be.visible');
+    })
+
 });

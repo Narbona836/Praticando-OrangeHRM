@@ -8,5 +8,6 @@
         "employeeListUrl": "/web/index.php/pim/viewEmployeeList",
         "campoEmployeeId": "[data-v-1f99f73c='']",
         "buttonSearch": "[data-v-10d463b7='']",
-        "checkUser": "[data-v-5a621acd='']"
+        "checkUser": "[data-v-5a621acd='']",
+        "campoEmployeeName": "[data-v-75e744cd='']"
 }

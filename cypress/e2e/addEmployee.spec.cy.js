@@ -26,7 +26,7 @@ describe('Add Employee', () => {
         cy.get(seletores.buttonPIM).eq(4).click()
         cy.get(seletores.buttonAddEmployee).eq(4).click()
         //adicionar formulario 
-        cy.get(seletores.campoFirstName).type('Willina')
+        cy.get(seletores.campoFirstName).type(randomUser.username)
         cy.get(seletores.campoMiddleName).type('Test')
         cy.get(seletores.campoLastName).type('User')
         cy.get(seletores.campoEmployeeId).eq(4).clear().type(randomUser.employeeId)
