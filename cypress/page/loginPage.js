@@ -1,7 +1,7 @@
 class LoginPage {
     selectors() {
     const seletores = {
-        usernameInput: 'input[name="username"]',
+        usernameInput: '[name="username"]',
         passwordInput: 'input[name="password"]',
         loginButton: 'button[type="submit"]',
         dashboardUrl: "/web/index.php/dashboard/index",
