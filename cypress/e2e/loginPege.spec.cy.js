@@ -1,20 +1,18 @@
 import userData from '../fixtures/userData.json';
-import seletores from '../fixtures/userSelectorLogin.json';
+import LoginPage from '../page/loginPage.js';
+
+
 
 describe('testes de login', () => {
+  const loginPage = new LoginPage();
+
   it('Login com credenciais válidas', () => {
-    cy.visit('/auth/login')
-    cy.get(seletores.usernameInput).type(userData.validUser.username);
-    cy.get(seletores.passwordInput).type(userData.validUser.password);
-    cy.get(seletores.loginButton).click();
-    cy.url().should('include', seletores.dashboardUrl);
+    loginPage.acessLoginPage();
+    loginPage.loginUser(userData.validUser.username, userData.validUser.password);
   })
   
   it('Login com credenciais inválidas', () => {
-    cy.visit('/auth/login')
-    cy.get(seletores.usernameInput).type(userData.invalidUser.username)
-    cy.get(seletores.passwordInput).type(userData.invalidUser.password)
-    cy.get(seletores.loginButton).click()
-    cy.get(seletores.menssagenAlert).should('contain', seletores.menssagenErro, )
+    loginPage.acessLoginPage();
+    loginPage.loginUserInvalid(userData.invalidUser.username, userData.invalidUser.password);
   })
 })
