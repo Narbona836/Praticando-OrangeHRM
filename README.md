@@ -83,8 +83,8 @@ A suíte de testes atual cobre os seguintes cenários no OrangeHRM:
 | **Login** | Validação de credenciais válidas. | ✅ Automatizado |
 | **Login** | Validação de credenciais inválidas. | ✅ Automatizado |
 | **Navegação** | Acesso rápido ao Dashboard após o login. | ✅ Automatizado |
-| **Admin** | Criação de um novo usuário (Admin/ESS). | 🚧 Em Andamento |
-| **PIM** | Exclusão de um funcionário. | 🚧 Em Andamento |
+| **Admin** | Criação de um novo usuário (Admin/ESS). | ✅ Automatizado |
+| **PIM** | Exclusão de um funcionário. | ✅ Automatizado |
 | **Logout** | Logout bem-sucedido do sistema. | ✅ Automatizado |
 
 ## 🤝 Contribuições
