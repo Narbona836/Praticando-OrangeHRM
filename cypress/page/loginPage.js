@@ -10,7 +10,7 @@ class LoginPage {
     
         }
         return seletores;
-    }
+    } 
     acessLoginPage() {
         cy.visit('/auth/login')
     }
@@ -25,6 +25,18 @@ class LoginPage {
         cy.get(this.selectors().passwordInput).type(password)
         cy.get(this.selectors().loginButton).click()
         cy.get(this.selectors().menssagenAlert).should('contain', this.selectors().menssagenErro)
+    }
+    createUser() {
+        cy.fixture('lastCreatedUser.json').then((user) => {
+        createdUser = user; 
+        });
+    }
+    loginRandomico() {
+        cy.log(`Tentando login com Username: ${createdUser.username}`);
+        cy.get(this.selectors().usernameInput).type(createdUser.username);
+        cy.get(this.selectors().passwordInput).type(createdUser.password);
+        cy.get(this.selectors().loginButton).click();
+        cy.url().should('include', this.selectors().dashboardUrl);
     }
 }
 

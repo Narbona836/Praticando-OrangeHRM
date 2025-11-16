@@ -3,7 +3,8 @@ import EmployList from '../page/employList'
 import LoginPage from '../page/loginPage';
 
 
-
+ // SE COLOCAR OS "CY.GET" DENTRO DE UMA FUNÇÃO ELE NÃO LE O "lastUser", 
+ // E SE DEIXAR ASSIM ELE NÃO LE OS SELETORES!
 describe('Employee List', () => {
     const loginPage = new LoginPage()
     const employList = new EmployList()

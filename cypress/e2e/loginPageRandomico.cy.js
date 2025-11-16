@@ -1,19 +1,16 @@
-import seletores from '../fixtures/userSelectorLogin.json';
+import LoginPage from '../page/loginPage';
 
 describe('testes de login', () => {
+    const loginPage = new LoginPage()
     let createdUser;
 
     before(() => {
-        cy.fixture('lastCreatedUser.json').then((user) => {
-            createdUser = user; 
-        });
+        loginPage.createUser()
+
+        
     });
     it('Login com com usuario ramdomico', () => {
-    cy.visit('/auth/login')
-    cy.log(`Tentando login com Username: ${createdUser.username}`);
-    cy.get(seletores.usernameInput).type(createdUser.username);
-    cy.get(seletores.passwordInput).type(createdUser.password);
-    cy.get(seletores.loginButton).click();
-    cy.url().should('include', seletores.dashboardUrl);
+        loginPage.acessLoginPage()
+        loginPage.loginRandomico()
   })
-})
+}) // NÃO CONSEGUE LER A VARIAVEL "LET" NO BEFORE

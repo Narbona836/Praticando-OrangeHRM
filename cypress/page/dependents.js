@@ -16,7 +16,7 @@ class Dependents {
         menssagenmSucesso: ".oxd-text.oxd-text--toast-message"
         }
         return seletores;
-    }
+    } 
     dependents() {
         cy.get(this.selectors().botonMyInfo).click()
         cy.url().should('include', this.selectors().urlMyInfo) 

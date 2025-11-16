@@ -14,7 +14,7 @@ class EmployList{
         campoEmployeeName: "[data-v-75e744cd='']"
         }
         return seletores;
-    }
+    } 
 
     pim() {
         cy.get(this.selectors().buttonPIM).eq(4).click();
