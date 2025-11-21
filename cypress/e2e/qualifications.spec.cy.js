@@ -13,7 +13,7 @@ describe('Qualifications', () => {
 
     it('Adicionar experiencia proficional com Sucesso', () => {
         qualifications.menuQualifications()
-        qualifications.addexperience()
+        qualifications.addexperience() 
         qualifications.saveQualifications
     })
     it('Deve apagar experiencia de trabalho com sucesso', () => {
