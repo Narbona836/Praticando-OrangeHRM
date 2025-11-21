@@ -1,6 +1,6 @@
 class LoginPage {
     selectors() {
-    const seletores = {
+    const seletores = { 
         usernameInput: '[name="username"]',
         passwordInput: 'input[name="password"]',
         loginButton: 'button[type="submit"]',
@@ -26,12 +26,12 @@ class LoginPage {
         cy.get(this.selectors().loginButton).click()
         cy.get(this.selectors().menssagenAlert).should('contain', this.selectors().menssagenErro)
     }
-    createUser() {
+    createUser(createdUser) {
         cy.fixture('lastCreatedUser.json').then((user) => {
         createdUser = user; 
         });
     }
-    loginRandomico() {
+    loginRandomico(createdUser) {
         cy.log(`Tentando login com Username: ${createdUser.username}`);
         cy.get(this.selectors().usernameInput).type(createdUser.username);
         cy.get(this.selectors().passwordInput).type(createdUser.password);

@@ -1,16 +1,20 @@
 import LoginPage from '../page/loginPage';
 
-describe('testes de login', () => {
-    const loginPage = new LoginPage()
-    let createdUser;
+describe('testes de login com usuario randomico criado em addEmployee.spec.cy.js', () => {
+  const loginPage = new LoginPage();
+  let createdUser;
 
-    before(() => {
-        loginPage.createUser()
-
-        
+  beforeEach(() => {
+    cy.readFile('cypress/fixtures/lastCreatedUser.json').then((user) => {
+      createdUser = user;
     });
-    it('Login com com usuario ramdomico', () => {
-        loginPage.acessLoginPage()
-        loginPage.loginRandomico()
-  })
-}) // NÃO CONSEGUE LER A VARIAVEL "LET" NO BEFORE
+  });
+
+  it('Login com usuario randomico criado em addEmployee.spec.cy.js', () => {
+    loginPage.acessLoginPage();
+
+    cy.wrap(createdUser).then(() => {
+      loginPage.loginRandomico(createdUser);
+    });
+  });
+});

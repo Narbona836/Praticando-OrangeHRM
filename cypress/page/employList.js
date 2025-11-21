@@ -14,21 +14,22 @@ class EmployList{
         campoEmployeeName: "[data-v-75e744cd='']"
         }
         return seletores;
-    } 
+    }  
 
-    pim() {
+    menuPim() {
         cy.get(this.selectors().buttonPIM).eq(4).click();
         cy.get(this.selectors().buttonEmployeeList).eq(3).click();
         cy.url().should('include', this.selectors().employeeListUrl);
     }
-    employListId() {
-
+    employListId(id) {
+        cy.get(this.selectors().campoEmployeeId).eq(1).clear().type(id);
         cy.get(this.selectors().buttonSearch).eq(1).click();
         cy.get(this.selectors().checkUser,this.employeeId).eq(1).should('be.visible');
     }
-    employListName() {
+    employListName(Name) {
+        cy.get(this.selectors().campoEmployeeName).eq(0).type(Name);
         cy.get(this.selectors().buttonSearch).eq(1).click();
-        cy.get(this.selector().checkUser,this.username).eq(1).should('be.visible');
+        cy.get(this.selectors().checkUser,this.username).eq(1).should('be.visible');
     }
 }
 

@@ -3,8 +3,7 @@ import EmployList from '../page/employList'
 import LoginPage from '../page/loginPage';
 
 
- // SE COLOCAR OS "CY.GET" DENTRO DE UMA FUNÇÃO ELE NÃO LE O "lastUser", 
- // E SE DEIXAR ASSIM ELE NÃO LE OS SELETORES!
+
 describe('Employee List', () => {
     const loginPage = new LoginPage()
     const employList = new EmployList()
@@ -17,15 +16,14 @@ describe('Employee List', () => {
     });
 
     it('Deve encontrar o usuario criado na lista pelo Id', function () {
-        employList.pim()
-        cy.get(seletores.campoEmployeeId).eq(1).type(this.lastUser.employeeId);
-        employList.employListId(employeeId)
+
+        employList.menuPim();
+        employList.employListId(this.lastUser.employeeId);
     });
 
     it('Deve encontrar o usuario criado na lista pelo Nome', function () {
-        employList.pim()
-        cy.get(seletores.campoEmployeeName).eq(0).type(this.lastUser.username);
-        employList.employListName(username)
-    })
+        employList.menuPim();
+        employList.employListName(this.lastUser.username);
+    });
 
 });

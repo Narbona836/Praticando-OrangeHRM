@@ -5,19 +5,19 @@ import LoginPage from '../page/loginPage'
 
 describe('Personal Details', () => {
   const loginPage = new LoginPage()
-  const personalDetais = new PersonalDetails()
+  const personalDetails = new PersonalDetails()
     beforeEach(() => {
       loginPage.acessLoginPage()
       loginPage.loginUser(userData.validUser.username, userData.validUser.password)
     })
 
-  it('pagina My Info', () => {
-    personalDetais.menuPersonalDetaisl()
-    personalDetais.employeeFullName()
-    personalDetais.employeeId()
-    personalDetais.nationality()
-    personalDetais.saveIndentification()
-    personalDetais.savecustomField()
+  it('Pagina My Info', () => {
+    personalDetails.menuPersonalDetails()
+    personalDetails.employeeFullName()
+    personalDetails.employeeId()
+    personalDetails.nationality()
+    personalDetails.saveIndentification()
+    personalDetails.savecustomField()
 
 
     })

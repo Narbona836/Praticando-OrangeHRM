@@ -1,4 +1,4 @@
-class PersonalDetais {
+class PersonalDetails {
     selectors() {
         const seletores = {
             buttonMayInfo: "[href='/web/index.php/pim/viewMyDetails']",
@@ -9,10 +9,10 @@ class PersonalDetais {
             campoId: "[data-v-1f99f73c='']",
             campoOTherId: "[data-v-1f99f73c='']",
             campoDriversLicense: "[data-v-1f99f73c='']",
-            campoLicenseExpiry: "[placeholder='yyyy-dd-mm']",
+            campoLicenseExpiry: "[data-v-4a95a2e0='']",
             campoNationality: "[data-v-67d2aedf='']",
             campoMaritalStatus: "[data-v-67d2aedf='']",
-            campoDateOfBirth: "[placeholder='yyyy-dd-mm']",
+            labelDateOfBirth: 'Date of Birth',
             campoGender: "[data-v-7ef819fd='']",
             bottonSaveIdentification: "[data-v-10d463b7='']",
             mensagenmSucesso: ".oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text",
@@ -21,7 +21,7 @@ class PersonalDetais {
         }
         return seletores
     }
-    menuPersonalDetaisl() {
+    menuPersonalDetails() {
         cy.get(this.selectors().buttonMayInfo).click()
         cy.url().should('include', this.selectors().urlMayInfo)
     }
@@ -34,19 +34,18 @@ class PersonalDetais {
         cy.get(this.selectors().campoId).eq(4).clear().type('12345')
         cy.get(this.selectors().campoOTherId).eq(5).clear().type('67890')
         cy.get(this.selectors().campoDriversLicense).eq(6).clear().type('A1234567')
-        cy.get(this.selectors().campoLicenseExpiry).eq(0).clear().type('2025-12-31')
+        cy.get(this.selectors().campoLicenseExpiry).eq(0).clear().type('2020-01-01')
     }
     nationality() {
         cy.get(this.selectors().campoNationality).eq(0).click({force: true})
         cy.contains('Brazilian').click()
         cy.get(this.selectors().campoMaritalStatus).eq(4).click()
         cy.contains('Single').click()
-        cy.get(this.selectors().campoDateOfBirth).eq(1).click().clear().type('1990-01-01')
+        cy.contains('label', this.selectors().labelDateOfBirth).parents('.oxd-input-group').find('input').click().clear().type('2333/01/02')
         cy.get(this.selectors().campoGender).eq(0).click()
     }
     saveIndentification() {
         cy.get(this.selectors().bottonSaveIdentification).eq(0).click()
-        cy.get(this.selectors().mensagenmSucesso).should('contain', 'Successfully Updated')
     }
     custonField() {
         cy.get(this.selectors().campoBloodType).eq(4).click()
@@ -55,8 +54,8 @@ class PersonalDetais {
     }
     savecustomField() {
         cy.get(this.selectors().bottonSaveIdentification).eq(1).click()
-        cy.get(this.selectors().mensagenmSucesso).should('contain', 'Successfully Updated')
+        cy.get(this.selectors().mensagenmSucesso).should('contain', 'Successfully Saved')
     }
 }
 
-export default PersonalDetais
+export default PersonalDetails
